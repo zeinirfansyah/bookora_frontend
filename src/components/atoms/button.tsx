@@ -4,7 +4,7 @@ interface IButtonProps {
   children: React.ReactNode;
   className?: string;
   onClick?: () => void;
-  variant?: "blue" | "red" | "green";
+  variant: "blue" | "red" | "green";
 }
 
 export const Button = ({

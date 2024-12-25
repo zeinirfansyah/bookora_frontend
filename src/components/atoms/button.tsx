@@ -4,7 +4,7 @@ interface IButtonProps {
   children: React.ReactNode;
   className?: string;
   onClick?: () => void;
-  variant: "blue" | "red" | "green";
+  variant: "blue" | "red" | "green" | "gray";
 }
 
 export const Button = ({
@@ -18,6 +18,7 @@ export const Button = ({
     red: "text-white bg-gradient-to-r to-red-500 via-red-400 from-red-500",
     green:
       "text-white bg-gradient-to-r to-green-500 via-green-400 from-green-500",
+    gray: "text-white bg-gradient-to-r to-gray-500 via-gray-400 from-gray-500",
   };
 
   return (

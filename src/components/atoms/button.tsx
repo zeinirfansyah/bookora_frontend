@@ -4,6 +4,7 @@ interface IButtonProps {
   children: React.ReactNode;
   className?: string;
   onClick?: () => void;
+  disabled?: boolean;
   variant: "blue" | "red" | "green" | "gray";
 }
 
@@ -11,6 +12,7 @@ export const Button = ({
   children,
   onClick,
   className,
+  disabled = false,
   variant = "blue",
 }: IButtonProps) => {
   const variants = {
@@ -25,7 +27,9 @@ export const Button = ({
     <>
       <button
         onClick={onClick}
-        className={`${className} ${variants[variant]} bg-size-200 bg-pos-0 hover:bg-pos-100 rounded px-4 py-2 border-none transition-all duration-700 w-full lg:w-auto`}
+        className={`${className} ${
+          disabled ? variants["gray"] : variants[variant]
+        } bg-size-200 bg-pos-0 hover:bg-pos-100 rounded px-4 py-2 border-none transition-all duration-700 w-full lg:w-auto`}
       >
         {children}
       </button>

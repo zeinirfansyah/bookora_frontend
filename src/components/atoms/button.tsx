@@ -28,7 +28,9 @@ export const Button = ({
       <button
         onClick={onClick}
         className={`${className} ${
-          disabled ? variants["gray"] : variants[variant]
+          disabled
+            ? `${variants["gray"]} cursor-not-allowed`
+            : variants[variant]
         } bg-size-200 bg-pos-0 hover:bg-pos-100 rounded px-4 py-2 border-none transition-all duration-700 w-full lg:w-auto`}
       >
         {children}
